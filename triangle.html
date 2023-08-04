@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Add_Reverse</title>
+  </head>
+  <script type="text/javascript" language="javascript">
+    function tCheck_Click() {
+      //   alert("Hii guys");
+      var bValue, hValue, check, s;
+      bValue = parseInt(document.frm1.txtbase.value);
+      hValue = parseInt(document.frm1.txtheight.value);
+      s = bValue * hValue;
+      check = s / 2;
+      document.getElementById("area").innerHTML = check;
+    }
+  </script>
+  <style>
+    .container {
+      height: 400px;
+      width: 600px;
+      background-color: rgb(236, 155, 223);
+      line-height: 40px;
+      font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+        sans-serif;
+      font-size: 25px;
+      margin: 50px 100px 50px 110px;
+    }
+    #btnArea {
+      color: rgb(225, 27, 243);
+      height: 30px;
+      width: 90px;
+      font-size: 20px;
+    }
+  </style>
+  <body>
+    <div class="container">
+      <form action="" method="post" class="frm1" name="frm1">
+        <table>
+          <tr>
+            <td><b>Enter Base:</b></td>
+            <td>
+              <input type="text" id="txtbase" name="txtbase" />
+            </td>
+          </tr>
+          <tr>
+            <td><b>Enter Height:</b></td>
+            <td>
+              <input type="text" id="txtheight" name="txtheight" />
+            </td>
+          </tr>
+
+          <tr>
+            <td colspan="2">
+              <input
+                onclick="tCheck_Click()"
+                type="button"
+                value="check"
+                id="btnArea"
+                name="btnArea"
+              />
+            </td>
+          </tr>
+          <tr>
+            <td><b>Area of triangle is = </b></td>
+            <td id="area">&nbsp;</td>
+          </tr>
+        </table>
+      </form>
+    </div>
+  </body>
+</html>
